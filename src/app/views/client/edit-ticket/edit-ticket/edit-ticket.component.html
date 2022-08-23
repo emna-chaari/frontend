@@ -1,0 +1,73 @@
+<form  #f="ngForm"  class="row g-3" >
+    <div class="col-md-6">
+      <label class="labels " for="titre"  >Titre</label>
+      <input type="text" class="form-control"required  id="titre" name="titre" >
+    </div>
+  
+    <div class="col-md-6">
+      <label class="labels" for="date_creation">Date de création</label>
+      <input type="date" class="form-control" id="date_creation" name="date_creation"required >
+    </div>
+  
+  
+  
+    <div class="col-md-6">
+            <label class="labels" for="source_demande">Source de demande</label> 
+              <select class="form-select" id="source_demande" name="source_demande" >
+                  <option *ngFor="let n of source_demande" [value]="n">{{n}}</option>
+              </select>
+           
+    </div>
+  
+    <div class="col-md-6">
+            <label class="labels" for="type">Type</label>
+            <select class="form-select" id="type" name="type" >
+                <option *ngFor="let n of type" [value]="n">{{n}}</option>
+            </select>
+    </div>
+  
+    <div class="col-md-6">
+              <label class="labels" for="categorie">Catégorie</label>
+              <select  class="form-select" id="categorie" name="categorie" required>
+                  <option *ngFor="let n of categorie" [value]="n" >{{n}}</option>
+               </select>
+    </div>
+  
+    <div class="col-md-6">
+            <label class="labels" for="impact">Impact</label>
+            <select class="form-select" id="impact" name="impact"  required>
+              <option *ngFor="let n of impact"[value]="n" >{{n}}</option>
+            </select>
+    </div>
+  
+    <div class="col-md-6">
+          <label class="labels" for="urgence">Urgence</label>
+            <select class="form-select" id="urgence" name="urgence"required>
+              <option *ngFor="let n of urgence"[value]="n"  >{{n}}</option>
+            </select>
+    </div>
+  
+    <div class="col-md-6">
+          <label class="labels" for="statut">Statut</label>
+          <select  class="form-select" id="statut" name="statut" required>
+             <option *ngFor="let n of statut" [value]="n" >{{n}}</option>
+           </select>
+     
+    </div>
+    <div class=" mb-3"> 
+        <label class="labels">Description</label>
+        <div class="textarea_style">
+          <textarea class="textarea" id="textarea" name="textarea_description" rows="2" cols="85"
+          maxlength="100" minlength="3"></textarea>
+        </div>
+        </div>
+ 
+  
+  
+    </form>
+
+    <div class="mb-3 text-center m-4 ">
+  <a routerLink="/technicien/liste-ticket"><button type="button" class="btn btn-secondary m-2"><i class="fas fa-times-circle"></i> &nbsp;Annuler</button></a>
+  <button type="button" class="btn btn-outline-warning"><i class="fas fa-retweet"></i>&nbsp;Modifier</button>
+</div>
+

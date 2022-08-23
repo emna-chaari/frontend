@@ -1,0 +1,75 @@
+
+<form class="row g-3">
+    <div class="col-md-6">
+      <label class="labels" for="titre"  >Titre</label>
+      <input type="text" class="form-control" id="titre" name="titre" required>
+    </div>
+  
+    <div class="col-md-6">
+      <label class="labels">Date de création</label>
+      <input type="date" class="form-control" id="date_creation" [value]="TodayDate"required >
+    </div>
+  
+    <div class="col-md-6">
+        <label class="labels" for="statut">Statut</label>
+        <select class="form-select" id="statut" name="statut" required>
+          <option *ngFor="let n of statut" >{{n}}</option>
+         
+         
+        </select>
+       
+      </div>
+  
+    <div class="col-md-6">
+            <label class="labels" for="source_demande">Source de demande</label> 
+            <select class="form-select"required id="source_demande" name="source_demande"  >
+              <option *ngFor="let n of source_demande" >{{n}}</option>
+            </select>
+    </div>
+  
+    <div class="col-md-6">
+              <label class="labels" for="type">Type</label>
+            <select class="form-select" name="type" id="type" required>
+              <option *ngFor="let n of type" >{{n}}</option>
+            </select>
+    </div>
+  
+    <div class="col-md-6">
+      <label class="labels" for="categorie">Catégorie</label>
+      <select  class="form-select" id="categorie" name="categorie"  required>
+        <option *ngFor="let n of categorie" >{{n}}</option>
+      </select>
+    </div>
+  
+    <div class="col-md-6">
+            <label class="labels" for="impact">Impact</label>
+            <select   class="form-select"id="impact" name="imapact" required>
+              <option *ngFor="let n of impact" >{{n}}</option>
+            </select>
+    </div>
+  
+    <div class="col-md-6">
+          <label class="labels" for="urgence">Urgence</label>
+            <select  class="form-select" id="urgence" name="urgence" required>
+              <option *ngFor="let n of urgence" >{{n}}</option>
+            </select>
+    </div>
+  
+
+
+    <div class=" mb-3"> 
+      <label class="labels" for="des">Description</label>
+      <div class="textarea_style">
+        <textarea class="textarea" id="textarea" name="textarea_description" rows="2" cols="85"
+        maxlength="100" minlength="3" placeholder=""  id="des" name="des" ></textarea>
+      </div>
+      </div>
+  
+    <div class="mb-3 text-center">
+     <a routerLink="/client/liste-ticket"><button type="button" class="btn btn-outline-secondary m-2"><i class="fas fa-times-circle"></i> &nbsp;Annuler</button></a> 
+      <button type="button" class="btn btn-outline-primary m-2"><i class="fas fa-check"></i>&nbsp;Ajouter</button>
+    </div>
+  
+  
+  
+  </form>
